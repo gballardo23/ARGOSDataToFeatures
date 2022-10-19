@@ -9,3 +9,6 @@
 ## Created: Fall 2022
 ## Author: John.Fay@duke.edu (for ENV859)
 ##---------------------------------------------------------------------
+
+#%% Import packages
+import arcpy, sys, os
