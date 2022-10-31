@@ -13,13 +13,16 @@
 # Import modules
 import sys, os, arcpy
 
+#Allow outputs to be overwritten
+arcpy.env.overwriteOutput = True
+
 # Set input variables (Hard-wired)
 inputFile = 'V:/ARGOSTracking/Data/ARGOSData/1997dg.txt'
 outputFC = "V:/ARGOSTracking/Scratch/ARGOStrack.shp"
 
 # Create feature class to which we will add features
-os.path.split(outputFC)
-arcpy.management.CreateFeatureclass()
+outPath, outFile = os.path.split(outputFC)
+arcpy.management.CreateFeatureclass(outPath,outFile)
 
 #%% Construct a while loop and iterate through all lines in the data file
 # Open the ARGOS data file
